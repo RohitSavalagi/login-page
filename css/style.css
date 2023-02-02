@@ -270,8 +270,6 @@ body {
   gap: 9px;
 }
 
-
-
 .sign-up__input {
   font-family: Verdana;
   font-size: 14px;
@@ -299,7 +297,6 @@ body {
   margin: 0;
 }
 
-
 .sign-up__wrapper {
   position: relative;
   display: flex;
@@ -311,7 +308,6 @@ body {
   margin-bottom: 25px;
   gap: 10px;
 }
-
 
 .button_theme_submit {
   background-color: #3cb878;
