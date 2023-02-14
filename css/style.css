@@ -169,7 +169,7 @@ body {
   display: flex;
   align-items: center;
   width: 157px;
-  /* justify-content: space-around; */
+  justify-content: space-around;
   
 }
 
