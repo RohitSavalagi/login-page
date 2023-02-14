@@ -1,6 +1,4 @@
 body {
-  width: 1366px;
-  margin: 0 auto;
   background: url("../img/background.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -9,10 +7,14 @@ body {
 }
 
 .main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: relative;
   height: 712px;
+}
+
+.link {
+  color: #3cb878;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
 }
 
 .menu {
@@ -31,12 +33,12 @@ body {
   font-size: 14px;
 }
 
-.header__text_big {
+.header__text--logo {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 1000;
   color: white;
-  padding: 20px 80px 20px ;
+  padding: 20px 0 20px 80px;
   display: block;
 }
 
@@ -45,7 +47,7 @@ body {
   align-items: center;
 }
 
-.header__element_icons {
+.header__element--icons {
   padding-right: 25px;
   display: flex;
   gap: 28px;
@@ -60,45 +62,36 @@ body {
   cursor: pointer;
 }
 
-.header__icons_calender {
+.header__icons--calender {
   background-position: -29px;
 }
 
-.header__icons_calender:hover {
+.header__icons--calender:hover {
   background-position: 0px;
 }
 
-.header__icons_forum {
+.header__icons--forum {
   background-position: -101px;
 }
 
-.header__icons_forum:hover {
+.header__icons--forum:hover {
   background-position: -63px;
 }
 
-.header__icons_compass {
+.header__icons--compass {
   background-position: -165px;
 }
 
-.header__icons_compass:hover {
+.header__icons--compass:hover {
   background-position: -135px;
 }
 
-.header__element_links {
+.header__element--links {
   padding-left: 25px;
   padding-right: 75px;
 }
 
-.link {
-  text-decoration: none;
-  border-bottom: 1px solid transparent;
-}
-
-.link__green-theme{
-  color: #3cb878;
-}
-
-.link__green-theme:hover {
+.link--hover:hover {
   border-bottom: 1px solid #3cb878;
 }
 
@@ -107,13 +100,13 @@ body {
   font-size: 14px;
 }
 
-.sign-up_container {
-  width: 444px;
-  margin: 0 auto;
-}
-
 .sign-up {
-  position: relative;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 10px;
   box-shadow: 0px 4px 18px 0 rgba(0, 0, 0, 0.52);
@@ -123,21 +116,22 @@ body {
   padding: 30px 60px;
 }
 
-.sign-up__element_instruction {
+.sign-up__element--instruction {
   margin-bottom: 15px;
   justify-content: space-between;
 }
 
-.header__text_big:hover {
+.header__text--logo:hover {
   color: #3cb878;
 }
 
 .sign-up__element {
   display: flex;
   align-items: center;
+  gap: 8px;
 }
 
-.sign-up__element_shape_rectangle {
+.sign-up__rectangle {
   position: absolute;
   right: 106.5px;
   width: 18px;
@@ -146,19 +140,19 @@ body {
   left: 0;
 }
 
-.sign-up__element_text {
+.sign-up__text {
   font-family: Verdana;
   font-size: 20px;
   color: #434343;
 }
 
-.sign-up__element_link {
+.sign-up__link {
   font-family: Verdana;
   font-size: 14px;
 
 }
 
-.sign-up__element_socail-media {
+.sign-up__social-links {
   justify-content: space-between;
 }
 
@@ -176,30 +170,31 @@ body {
   display: flex;
   align-items: center;
   width: 157px;
-  justify-content: space-around;
+  /* justify-content: space-around; */
+  
 }
 
-.button_theme_facebook {
+.button--facebook {
   background-color: #004191;
 }
 
-.button_theme_facebook:hover {
+.button--facebook:hover {
   background-color: #1e87c4;
 }
 
-.button_theme_facebook:active {
+.button--facebook:active {
   background-color: #0059ff;
 }
 
-.button_theme_google {
+.button--google {
   background-color: #df4a32;
 }
 
-.button_theme_google:hover {
+.button--google:hover {
   background-color: rgb(255, 99, 99);
 }
 
-.button_theme_google:active {
+.button--google:active {
   background-color: rgb(255, 21, 0);
 }
 
@@ -224,7 +219,7 @@ body {
   line-height: 1.31;
 }
 
-.sign-up__element_or {
+.sign-up__or {
   margin: 0 auto;
   background-color: white;
   z-index: 1;
@@ -233,13 +228,13 @@ body {
   font-size: 14px;
 }
 
-.sign-up__element_or-line {
+.sign-up__or-divider {
   position: relative;
   margin-top: 33px;
   margin-bottom: 17px;
 }
 
-.sign-up__element_or-line:before {
+.sign-up__or-divider:before {
   content: "";
   height: 1px;
   width: 50%;
@@ -249,7 +244,7 @@ body {
   right: 0;
 }
 
-.sign-up__element_or-line:after {
+.sign-up__or-divider:after {
   content: "";
   height: 1px;
   width: 50%;
@@ -286,7 +281,7 @@ body {
   box-shadow: 0px 3px 8px 0 rgba(0, 0, 0, 0.21);
 }
 
-.form__element_t-and-c {
+.sign-up__agreement {
   width: 20px;
   height: 20px;
   box-shadow: none;
@@ -305,12 +300,12 @@ body {
   gap: 10px;
 }
 
-.button_theme_submit {
+.button--submit {
   background-color: #3cb878;
   line-height: 3.3;
 }
 
-.button_theme_submit:active {
+.button--submit:active {
   background-color: #43eb64;
 }
 
